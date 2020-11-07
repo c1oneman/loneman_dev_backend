@@ -1,5 +1,5 @@
 # loneman.dev backend 
-[![Heroku](http://heroku-badge.herokuapp.com/?app=loneman-dev-backend&root=api/projects/)]
+[Heroku Badge](http://heroku-badge.herokuapp.com/?app=loneman-dev-backend&root=api/projects/)
 
 This project was built with my knowledge built from Lambda School.
 The data returned is mostly static, being updated by me when I have a project to show off.

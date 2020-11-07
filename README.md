@@ -17,10 +17,10 @@ Endpoints for viewing the projects/technologies tables.
 ### Portfolio project related
 
 GET an array of all projects objects
-* [Projects](projects.md) : `GET /api/projects/`
+* [Projects](PROJECTS.md) : `GET /api/projects/`
 
 GET the technologies used for a specific project
-* [Project Skills](projects.md) : `GET /api/projects/:id/techs`
+* [Project Skills](PROJECTS-TECHS.md) : `GET /api/projects/:id/techs`
 
 ### Personal Skills 
 

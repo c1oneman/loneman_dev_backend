@@ -1,6 +1,6 @@
 # Projects
 
-Used to details of my projects over my career
+Used to GET details of my projects over my career
 
 **URL** : `/api/projects/`
 
@@ -18,7 +18,7 @@ server.
 
 **Code** : `200 OK`
 
-**Content example**
+**Projects Response example**
 
 ```json
 {

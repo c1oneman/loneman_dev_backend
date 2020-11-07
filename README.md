@@ -24,6 +24,5 @@ GET the technologies used for a specific project
 
 ### Personal Skills 
 
-Endpoints for viewing the skillset table.
-
+GET portfolio skillset list
 * [Skills](accounts/get.md) : `GET /api/skills/`

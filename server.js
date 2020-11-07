@@ -5,6 +5,10 @@ const DataRouter = require("./helpers/data-router.js");
 const server = express();
 
 server.use(express.json());
-server.use("/api/", DataRouter);
 
+server.get("/", (req, res) => {
+    res.status(200).json({message: 'API is Online'})
+  });
+
+server.use("/api/", DataRouter);
 module.exports = server;

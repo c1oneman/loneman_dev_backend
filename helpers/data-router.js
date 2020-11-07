@@ -3,10 +3,6 @@ const db = require("../data/config.js");
 const projects = require("./data-model.js");
 const router = express.Router();
 
-router.get("/", (res) => {
-  res.status(200).json({message: 'API is Online'})
-});
-
 // PROJECTS
 router.get("/projects", (req, res) => {
     projects.find()

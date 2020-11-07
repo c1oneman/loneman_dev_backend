@@ -4,9 +4,12 @@
 This project was built with my knowledge built from Lambda School.
 The data returned is mostly static, being updated by me when I have a project to show off.
 
+All GET endpoints require no Authentication.
+
 ## Open Endpoints
 
-All GET endpoints require no Authentication.
+Endpoints for viewing the projects/technologies tables.
+
 
 ### Portfolio project related
 
@@ -18,8 +21,8 @@ GET the technologies used for a specific project
 
 ### Personal Skills 
 
-Endpoints for viewing and manipulating my skillset table.
+Endpoints for viewing the skillset table.
 
 * [Skills](accounts/get.md) : `GET /api/skills/`
-* [Create Skill](accounts/post.md) : `POST /api/skills/`
+
 

@@ -25,4 +25,4 @@ GET the technologies used for a specific project
 ### Personal Skills 
 
 GET portfolio skillset list
-* [Skills](accounts/get.md) : `GET /api/skills/`
+* [Skills](SKILLS.md) : `GET /api/skills/`

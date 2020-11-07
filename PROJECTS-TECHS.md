@@ -1,4 +1,4 @@
-# Projects
+# Project Techs
 
 Used to GET technologies of my projects over my career
 

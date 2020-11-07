@@ -6,10 +6,9 @@ function find(){
     return db("projects");
 };
 
-function findById(id) {
+function findById(id) { 
     return db("projects")
-        .where({ id })
-        .first();
+        .where('projects.id', '=', id)
 }
 
 function add(value){
@@ -26,8 +25,11 @@ function findTechnologies(){
 function findTechnologiesById(id) {
     return db("technologies")
         .where('project_id', '=', id)
+        .select('name', 'id')
 }
-
+function findSkills() {
+    return db("skills")
+}
 
 
 module.exports = {
@@ -35,5 +37,6 @@ module.exports = {
     findById,
     add,
     findTechnologies,
-    findTechnologiesById
+    findTechnologiesById,
+    findSkills
 };

@@ -19,11 +19,19 @@ exports.up = function(knex) {
             .onUpdate("CASCADE")
             .onDelete("RESTRICT")
     })
-
+    .createTable('skills', tbl => {
+        tbl.increments()
+        tbl.string('name', 24).notNullable()
+        tbl.string('color', 24).notNullable()
+        tbl.string('url', 24).notNullable()
+        tbl.string('icon', 24).notNullable()
+        tbl.string('time', 24).notNullable()
+    })
 };
 exports.down = function (knex, Promise) {
     // drop in the opposite order
     return knex.schema
+        .dropTableIfExists('skills')
         .dropTableIfExists('technologies')
         .dropTableIfExists('projects')
 };

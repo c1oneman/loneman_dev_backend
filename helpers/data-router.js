@@ -17,7 +17,6 @@ router.get("/projects", (req, res) => {
 
 router.get("/projects/:id", (req, res) => {
     const { id } = req.params;
-  
     projects.findById(id)
     .then(project => {
       if (project) {
@@ -41,32 +40,31 @@ router.post("/projects", (req, res) => {
             console.log(error);
         })
 });
+// TECHS
+router.get("/projects/:id/techs", (req, res) => {
+  const { id } = req.params;
+  projects.findTechnologiesById(id)
+  .then(tech => {
+    if (tech) {
+      res.json(tech);
+    } else {
+      res.status(404).json({ message: "Error retrieving technology with the specified ID." })
+    }
+  })
+  .catch(error => {
+    console.log(error);
+    res.status(500).json({ message: "A technology for the specified ID does not exist." });
+  });
+});
 
-router.get("/technologies", (req, res) => {
-    projects.findTechnologies()
-        .then(techs => {
-            res.status(200).json({ data: techs } );
+router.get("/skills/", (req, res) => {
+  projects.findSkills()
+        .then(skills => {
+            res.status(200).json({ skills } );
         })
         .catch(error => {
             console.log(error);
-            res.status(500).json({ message: "Error retrieving technologies." })
+            res.status(500).json({ message: "Error retrieving skills" })
         })
 });
-
-router.get("/technologies/:id", (req, res) => {
-    const { id } = req.params;
-    projects.findTechnologiesById(id)
-    .then(tech => {
-      if (tech) {
-        res.json(tech);
-      } else {
-        res.status(404).json({ message: "Error retrieving technology with the specified ID." })
-      }
-    })
-    .catch(error => {
-      console.log(error);
-      res.status(500).json({ message: "A technology with the specified ID does not exist." });
-    });
-});
-
 module.exports = router;

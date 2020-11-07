@@ -6,6 +6,9 @@ The data returned is mostly static, being updated by me when I have a project to
 
 All GET endpoints require no Authentication.
 
+### Current Production Endpoint
+https://loneman-dev-backend.herokuapp.com/
+
 ## Open Endpoints
 
 Endpoints for viewing the projects/technologies tables.
@@ -24,5 +27,3 @@ GET the technologies used for a specific project
 Endpoints for viewing the skillset table.
 
 * [Skills](accounts/get.md) : `GET /api/skills/`
-
-
